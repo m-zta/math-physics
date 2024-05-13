@@ -1,17 +1,18 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
+
 # Different representations of the Dirac delta function
 
 
 def L(x, h):
     """Lorentzian curve with half-width h"""
-    return np.where(h > 0, 1 / np.pi * h / ((x)**2 + h**2), 0)
+    return np.where(h > 0, 1 / np.pi * h / (x ** 2 + h ** 2), 0)
 
 
 def G(x, h):
     """Gaussian curve with standard deviation h"""
-    return np.where(np.abs(x) <= h, 1/(2*h), 0)
+    return np.where(np.abs(x) <= h, 1 / (2 * h), 0)
 
 
 def main():
